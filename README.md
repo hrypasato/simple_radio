@@ -1,6 +1,6 @@
 # simple_radio
 
-An example of flutter_radio_player, using signals as state manager.
+An example of [flutter_radio_player](https://pub.dev/packages/flutter_radio_player), using [signals_flutter](https://pub.dev/packages/signals_flutter) as state manager.
 
 ## Getting Started
 
