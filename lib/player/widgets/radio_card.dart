@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_radio_player/flutter_radio_player.dart';
-import 'package:simple_radio/presentation/widgets/equalizer_icon.dart';
+import 'package:simple_radio/player/widgets/equalizer_icon.dart';
 
 class RadioCard extends StatelessWidget {
   final VoidCallback onSourceTap;

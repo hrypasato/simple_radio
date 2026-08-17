@@ -1,8 +1,8 @@
 import 'package:flutter_radio_player/flutter_radio_player.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:simple_radio/core/sources.dart';
+import 'package:simple_radio/radio/sources.dart';
 
-class RadioController {
+class PlayerController {
   final _player = FlutterRadioPlayer();
 
   // Signals del estado

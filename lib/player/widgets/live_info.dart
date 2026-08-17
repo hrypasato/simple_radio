@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class InfoCard extends StatelessWidget {
+class LiveInfo extends StatelessWidget {
   final String title;
   final String? source;
-  const InfoCard({super.key, required this.title, this.source});
+  const LiveInfo({super.key, required this.title, this.source});
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_radio/presentation/screens/player_screen.dart';
+import 'package:simple_radio/player/player_screen.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

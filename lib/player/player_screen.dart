@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:signals_flutter/signals_flutter.dart';
-import 'package:simple_radio/core/sources.dart';
-import 'package:simple_radio/presentation/widgets/artwork.dart';
-import 'package:simple_radio/presentation/widgets/control_card.dart';
-import 'package:simple_radio/presentation/widgets/info_card.dart';
-import 'package:simple_radio/presentation/widgets/radio_card.dart';
-import 'package:simple_radio/presentation/widgets/volume_slider.dart';
-import 'package:simple_radio/services/radio_controller.dart';
+import 'package:simple_radio/radio/sources.dart';
+import 'package:simple_radio/player/widgets/artwork.dart';
+import 'package:simple_radio/player/widgets/control_card.dart';
+import 'package:simple_radio/player/widgets/live_info.dart';
+import 'package:simple_radio/player/widgets/radio_card.dart';
+import 'package:simple_radio/player/widgets/volume_slider.dart';
+import 'package:simple_radio/player/player_controller.dart';
 
 class PlayerScreen extends StatefulWidget {
   const PlayerScreen({super.key});
@@ -17,7 +17,7 @@ class PlayerScreen extends StatefulWidget {
 
 class _PlayerScreenState extends State<PlayerScreen> {
   // El controlador vive aquí, no se recrea en rebuilds
-  final _controller = RadioController();
+  final _controller = PlayerController();
 
   @override
   void initState() {
@@ -50,7 +50,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                     _controller.nowPlaying.value?.title ??
                     _controller.currentSource.value.title ??
                     'Unknown Station';
-                return InfoCard(
+                return LiveInfo(
                   title: title,
                   source: _controller.currentSource.value.title,
                 );
